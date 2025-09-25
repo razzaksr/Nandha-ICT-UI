@@ -1,0 +1,94 @@
+Web development:
+	UI/ Front end
+	API/ Back end
+	Data/ Data base
+Http(80)/ Https(443): protocol
+Server>> Live server using vs code
+
+
+Required tool:
+VS Code
+Required Extension:
+Live server
+Intellisense for CSS
+
+
+UI Developer:
+	HTML
+	CSS
+	Bootstrap
+	JS
+Use case 1
+	React JS
+Use case 2
+	Angular
+Use case 3
+
+HTML: Hyper Text Markup Language
+Elements
+attributes
+eg:
+	<element attributes="value">
+	.........
+	</element>
+
+
+syntax:
+<html>
+	<head>
+		... external file inclusion
+		... meta data
+	<title>Document/ Page title </title>
+	</head>
+	<body>
+		.. contents to be appeared in the page
+	</body>
+</html>
+
+. html	>> web page
+	components/ elements:
+		1. Text Element:
+			p, h1, h2, h6, br format b,i,u
+		2. List element
+			ol, ul, li
+		3. Media element
+		4. group element
+		5. form element
+		6. navigation element
+
+Web site/ Web application:
+	Static Web app
+		eg: Single Page Application/ company public site, product site, wikipedia
+	dynamic web app
+		design common but not the contents
+		eg:
+			e-commerce, weather, gmail, irctc, swiggy,....
+		
+		
+	
+Application:
+	Data:
+	Operations:
+		Create Read Update Delete
+
+
+Task:
+Name
+role
+icons: linkedin git project1(div id) project2(div id)
+
+Executive Summary
+....
+...
+..
+
+Project Title
+description...
+...
+
+Tech Stack
+1.
+2.
+3.
+
+Tools:
