@@ -52,9 +52,12 @@ syntax:
 		2. List element
 			ol, ul, li
 		3. Media element
+			video, audio, img
 		4. group element
+			header, footer, div, section
 		5. form element
 		6. navigation element
+			a
 
 Web site/ Web application:
 	Static Web app
@@ -92,3 +95,16 @@ Tech Stack
 3.
 
 Tools:
+
+
+
+
+https://github.com/razzaksr/Nandha-ICT-UI
+
+
+
+
+
+
+
+
