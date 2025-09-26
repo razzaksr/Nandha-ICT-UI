@@ -6,7 +6,13 @@
     <title>Maruti Suzuki Baleno</title>
 </head>
 <body>
-
+    <nav>
+        <a href="#outer">Exterior</a>
+        <a href="#inner">Interior</a>
+        <a href="#spec">Specification</a>
+        <a href="#review">Testimonials</a>
+        <a href="#drive">Test Drive</a>
+    </nav>
     <!-- exterior -->
     <h1>Baleno's Exterior Views</h1>
     <div align="center" id="outer">
@@ -21,7 +27,7 @@
     </div>
     <!-- specification -->
     <h1>Baleno's Specification</h1>
-    <div align="center" id="outer">
+    <div align="center" id="spec">
         <table border="4px" cellspacing="10px" cellpadding="10px">
             <thead>
                 <tr>
@@ -50,7 +56,60 @@
             </tbody>
         </table>
     </div>
-    testimonials
-    enquiry
+    <!-- testimonials -->
+    <h1>User Review's</h1>
+    <div id="review">
+        <div>
+            <h3>Razak Mohamed S</h3>
+            <p>Sigma is comfort and compatible to all circumstances</p>
+            <ol>
+                <li>Automatic Climate Control</li>
+                <li>Power Windows</li>
+            </ol>
+        </div>
+        <div>
+            <h3>Annamalai S</h3>
+            <p>Zeta with high performances in mileage</p>
+            <ol>
+                <li>Mileage</li>
+                <li>Cruise Control</li>
+            </ol>
+        </div>
+    </div>
+    <!-- enquiry -->
+    <h1>Book for Test drive</h1>
+    <div id="drive">
+        <!-- get, post -->
+        <form action="#" method="post">
+            <div>
+                <label>Name</label>
+                <input type="text" name="customer" placeholder="enter the name"/>
+            </div>
+            <div>
+                <label>Contact</label>
+                <input type="tel" name="contact" placeholder="enter the contact"/>
+            </div>
+            <div>
+                <label>Address</label>
+                <textarea placeholder="enter the complete address" name="address"></textarea>
+            </div>
+            <div>
+                <label>KM from Showroom</label>
+                <input type="radio" name="km" value="near"/>Near
+                <input type="radio" name="km" value="remote"/>Remote
+            </div>
+            <div>
+                <label>Model</label>
+                <select name="model">
+                    <option>Select Any Model</option>
+                    <option>Sigma</option><option>Delta</option>
+                    <option>Zeta</option><option>Alpha</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Book">
+            </div>
+        </form>
+    </div>
 </body>
 </html>

@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <style>
+        /* class selector and multiple selector at same time*/
+        .intro, .person{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .person{
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
-    <h1>Razak Mohamed S</h1>
-    <h2>Technical Consultant</h2>
-    <img src="./asset/new copy.jpg" width="200px" height="150px" alt="DP"/>
+    <div class="person">
+        <h1>Razak Mohamed S</h1>
+        <h2>Technical Consultant</h2>
+        <img src="./asset/new copy.jpg" width="200px" height="150px" alt="DP"/>
+    </div>
     <h2>Introduction</h2>
-    <video width="450px" height="250px" src="./asset/Peru.mp4" controls autoplay muted>
-    </video>
-    <audio src="./asset/Valimai BGM.mp3" controls></audio>
+    <div class="intro">
+        <video width="450px" height="250px" src="./asset/Peru.mp4" controls autoplay muted>
+        </video>
+        <audio src="./asset/Valimai BGM.mp3" controls></audio>
+    </div>
     <hr color="blue"/>
     <h3>Executive Summary</h3>
     <p>One and half decade of exeperince mentoring young minds and experienced people towards IT Industry</p>

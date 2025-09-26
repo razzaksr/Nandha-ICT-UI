@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike Consultancy</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: red;
+        }
+        /*cursor: text;*/
+        a:hover{
+            color: yellow;
+            cursor: url(./asset/cur.png), auto;
+        }
+        /*horizontal alignments: center, start, end, around, evenly, between*/
+        #rides{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
     <a href="#gallery">
@@ -15,7 +31,7 @@
     </header>
 
     <h2>Ride Experience</h2>
-    <div id="rides" align="end">
+    <div id="rides">
         <video width="500px" height="300px" controls src="https://www.pexels.com/download/video/1793482/"></video>
         <video width="500px" height="300px" controls src="https://www.pexels.com/download/video/852038/"></video>
     </div>
