@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike Consultancy</title>
+    <link rel="stylesheet" href="./asset/mobile.css"/>
     <style>
         a{
             text-decoration: none;
             color: red;
         }
-        /*cursor: text;*/
+        /*cursor>> text, pointer, default*/
         a:hover{
             color: yellow;
             cursor: url(./asset/cur.png), auto;
@@ -17,7 +18,21 @@
         /*horizontal alignments: center, start, end, around, evenly, between*/
         #rides{
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        /* responsivenes*/
+        /* small screen*/
+        #rides video{
+            max-width: 100%;
+            flex: 1 1 100%;
+        }
+        /*for medium and large screens*/
+        @media (min-width:768px){
+            #rides video{
+                flex: 0 0 40%;
+                box-shadow: 10px 10px 10px grey;
+            }
         }
     </style>
 </head>
@@ -32,8 +47,8 @@
 
     <h2>Ride Experience</h2>
     <div id="rides">
-        <video width="500px" height="300px" controls src="https://www.pexels.com/download/video/1793482/"></video>
-        <video width="500px" height="300px" controls src="https://www.pexels.com/download/video/852038/"></video>
+        <video height="300px" controls src="https://www.pexels.com/download/video/1793482/"></video>
+        <video height="300px" controls src="https://www.pexels.com/download/video/852038/"></video>
     </div>
 
     <div id="test">
@@ -48,9 +63,10 @@
     </div>
     
     <h2>Bike Gallery</h2>
-    <div align="center" id="gallery">
-        <img width="500px" height="300px" src="https://images.pexels.com/photos/2393835/pexels-photo-2393835.jpeg" alt="bike1">
-        <img width="500px" height="300px" src="https://images.pexels.com/photos/2607554/pexels-photo-2607554.jpeg" alt="bike2">
+    <div id="gallery">
+        <img id="i1" height="300px" src="https://images.pexels.com/photos/2393835/pexels-photo-2393835.jpeg" alt="bike1">
+        <img id="i2" height="300px" src="https://images.pexels.com/photos/2607554/pexels-photo-2607554.jpeg" alt="bike2">
+        <img id="i3" height="300px" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQApAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIDBAUHBgj/xAA5EAABBAEDAQYEBAQFBQAAAAABAAIDEQQFEiExBhMiQVFhFDJxgQeRobFCwdHwFSQzNFIjU3Ph8f/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAHBEBAQEAAwEBAQAAAAAAAAAAAAERAhIxIQMT/9oADAMBAAIRAxEAPwD30Y5Ctx8BRxwlWWQupc1xC5tlOZHZU7ccnqpWRBvmLQMbDwhzKUxdXoonzMb1PKCCVg28rPkaN3Ctz5IdwAqp5VjNMpKAlATqWmcIAik4BFIpAEUnAJaUDaRScAlpA2kUnUlpAykUn0ikDKQn0hBpMiA8gpgA0WSAs52cT0UT8p7upsLLXZelyo2cXZVWTMJ+VVC6zaRXE1Kch580wuceqRLSuBKS0ik6kQ0BKnAJaQNAS0ngIpAlIpOpCBKQAlpFIoQhLSBEichA1CVIgpAlPCaE4IwcEoSBOCNFASgJAnDhAUnJFX1HKGDhT5RjfKIWF5ZGLc6vIILNotc7b+LGktmjZlYGfjgg797G237XZV3K/ErQxid5p8jsvILgG4+0xu++5XKj3ANoB6HmvWlznC/E6HKbI2XTZYH1TH94HNB8t3nX0tbPYyPInzc/Vn5EksOUS1n/AFXbCQeSIz8iXjVeuSpoNBKCsqcEIBQroOEFCE0IgpUFTVNQlQoKATwmApwKM4eEtpgKeE0OS2mpQqHWjqEiVNFXK07DzGFmViQTNPUSRg2vK6z+GvZ/UXh8UBwX0f8AagNHlzX99SvZ2s/L1rT8Xd3mTGXDq0GyrLSuR5/4a6vh5knwPeS4jG7jJvaHu9g2+Vvfh/2vd8dNg62W48joe93uAY17m1zXqW8+9K9rvb6XBPe4mPC6NpbbZCbNnmvyXPdU1bG1LSsWKbT4zkRRlrciN9P27iaLT1q+oK6Tb6muiT/ilpseY+KLDyZIR8s1taHGulHotDQvxE0nVZCyVk2G4CyZgCwfVw6fVcNa+2+Nm5ottjoB7qzpz6gzIbPjgdVHrx+qdIPpM52OMN2WJmugawv7xh3AgeiTE1LFzWk4uRFKQOQx4cW/UeS4xFpmeezDn4vxcc3DW48MUpErCPlpvhFnzKvdmtJ7Z6NN8Zi6REH7bdHLM0b768eqzeMV2QO9kWvGaR2yzcjObgaj2c1PEyi3d4Wb2kDqQfNeqxMyLL7zuWzNMb9jhJE5nNX5+S540s2glIkQLaE1CKpBOUQKeCqykCcmApwKinoTbCA5A8lAI9QmPLg0lvzDmlx3tF2w1o5bYcbMfhBvMjd9lrr+WyFeM1LXZH+NrmDq4EcLi2v5+mnKdAZpviwXNeyOMlwN1Vfb9Vb03tn2jYAPiYcsekjAT+iodoO2sv8AiEnfaRA3Ic0d5I1+0nj6fVdePGxn15jUstzXyQPLnNA4DxRB9/zVPJk36fiEDlhLVBKAZXuF07xCzacDeDX/ABk/ktrjRwZNIfithzficTKaSWZcA3tdfk9pN8eo/JJjf7rfHM2Ta14a8Ct9tIHB+qy4O7LgJXGvX2ViTGx42bo5+8kdRYGDgG+hUHQ9JGtabmabHsErJJGMZWV4nWeSBZNAC12AV6Ll/wCGMWDhZ5iyY4znywCSKazZFlrm8+fhXTt3nfFfkuXP0kSAA9Ql8v3VM50AcG94LKsg35rGNHpCU0urzSBwPminoTbQqKFpQVFG8SMD2/KeQnWqiYFO3KJpSSyCONziQKF2SgpdodXGjYBynRukryC5tk/iPqolkEcEQaTxZJKu9uu1bJcaXChaH2S1zgeLXPseeXeyXwnxVz0Wpx+Jrv8AoWsR6jpOPlu8BkHQ9bXKPxE0zLxO1bvh29/Fnu3xBvzNd5tv+qgxdR1TSMvFyO9e/HifbWH5dx9FZg1p+dr+S/Jkja+VpIa53y8Vx9ikmVKraDhhmRIyWMMmjAcTXDh519+FR1nCGZkPkkdtmI/6cd9Ggnk/U9PovV6rJGZ4M9kDo6HdNaRt7w109mjzPta8S7Imj128pr3SGQMma9vkSBx9ui6sxkyMMZ7uQbXC6RACYHeIhm8cUrvaKIwZbIywsLQ7guBPXjooohekH1+Jrjr0UaUHtLHlrm0fT68oNtrxH7Fber6TkunfkRxt7vawbd4Dr2gHj6rG7vY4iQ7aQetjyZmQafNiuIyYII+7IPO4yeE/uu6SyPbAXEOLto4aPNcd7DDA1TO0rGknZ3mOxxcwnbZDwW9ev2XZH+Njth2k+foufNqPAYukarL2lmypsk91F49gNjr0XQMaTfGHFwdx/Cq+DjMx5chsbabuFX16KyyNrHOc3gu6rFqs7tFq8Ok4L8ic+EkNodeeAvMdiNfy8p2f/iZDAzI2xlxqhV0V6rVtKg1OPu5R0cHDzqlX0jTYG99K7HY2V0pu2i+Koqo1Wzsc0Hn8kKQCkKK8nquujStPbJ4JZmtBLGuofZYEfb6JkneSi43Nssrlp9FzOfLmmYd+Q9xoCieoUbphLEAbDhwunVjXYdA7Xx6xqDYmSRxN2X3cnUnzpamsZXexyDGfFMI27nssUAuGYuU7Ee17HEPF0R1U0Wq5EbnmOd7d58Xi+b6p1XSZ8gl1GYAANdISB6JdwbssbQeg916Hs3o2JqOmv1HIidNIJi1zA6gB9lm9pNJ/wrMa4Pc/DkaZInHk0OrT72QtM60s/VsOTT8WPJY7dGPFtZ8yysTM02XVJcvULbBtd3bGNPLiKF+gVDT5ptQyxjOk4kummtreFabp7MvXmYrW7YY2gyXx8o8X6/ukitvW9WDcMyWaczu4m3/DQs/Vx/T6rDl1AatBB8U0x5cdgTsBt7RyL9wVW1/IkyMyTc4VG7a1o8/dUg6QRN7skUP4T09bVEmbnO1DJfNMxjHuaBTegIV/QQ0nHjc0P/zbXFvXiuTXp7rFcwtJB8uSvXfh1NHHl6rJKWtDdOe7cR0Ac2/3QpvanUBFI8R/6jiWjjp7ry8TRKXOPLhyfdX+0khfn88eG6+qp4OwSlz5Aym2OL3HpSE8eh0CfFOHk4zcZhyZXMMUxcWmF4PzNPlwu8941ke5zvCBy5fNWLKYcjr0cV2PSu0EWV2TDJJAcpjdlH+Kjx+ix+nFZXtYCHPlINix+ymJFXawtI1aGSCV8hDI2OAdJ0ANKPV+0mls0uaduWx26M7Qxws/Rc8rWt4Fp+VwP0UcJp0v/k/kFyDsr23do8WRHmd7kh7iWi+R91t6N2/igxMmXUXEyyTHu2Do1gAATrU10V8rmmg20Lx+L+IuiuhBnldHJ5tq6QplX44YLaAbTg7m1GgHlelhK51poPU0mko3IPS9ktR7qLKwJJnRxZIA4PQ+qWTMysLdiQmRz4/FQ5af/S87DLteLHFUtbHcNTxWY0MYOVCzh28NL/YA9SiYv6FiDL1GPIMMr5Nr2SsbTdp2nk+ybp8sjMzMzJe7+Ic+tj3fMPQ/ThZ7cbUoMaaZz5I2QyBssZJBHHB/kqnxT42SljxT3DwuNlBPkEZeqyHhu6xx60qLKjyC19kdHUrGLO0SQh4+RxffuVZzo2y7poqD6546oKeJAJpnSvI7pgLnE+g6Ba+m5UcLckttuMccQP2iy8EtD/sSqWRqhkwYcXHhayKMEngEucfMqPvmtgbFEQ0bCH23pyCD7nhRomouZLmSF28ybtvtQAUQi2ysjcQ1sg33XSrUL3ySSt5t+7y4slWc2L4fu2yOuQx7hzdWSiIZHVkOLfM2tE5L4hG9khBad3VZRJMpJ6kq+yB2QxoFEmwATSUWjruoNx5cePJe3HlcXPaD8yznOJa00Kb09lLDivka4ejttJwxHDGaXciQW36j+/0WNggLyDRq0d45wrqFZnxS5mPtA3OG2/t1ViPS5Yp99NLCAQPS/wCynaLirGxr2A1XshWW44Z4XeR4rzCE7QxUdBC6YhhG2v1UZx294wHmqB91uRYWKeaIvztNGHi2etjnqsf0iYz4sfGkidHXjNnf6BZ80IZGaB3B+1elZjY0e17B16+4Ke/CxthPd+O/P91P6xXlWxv3g7eBytLRMduXmiJ5Je7HeWm68Q+VaEsMIxJXsAB2kfosGOaTGkx8iGQse1vDh5UunHl2G5qkjTHFiatO6TKEW7v4xyz0a/8A5fXqsSTTsthpsJkaQCHspzSPYhLn94JGvneXSysEjifUqmfdaFmaJ8DtpaLFWb6FLHkOZweR5pYsKWbHbJHtNk+HzSHAyt+zuxf1TtBAR46B49ltdnsOLNyBDOzeHiTw+4jNLJ7p8cuyQAEEWCVpaVljTcuKWT5Ypy1/0LaTdEzNJEmb8OwFrmv2sddij8p9yegHuqmrwRjVciKB5cyA7bPNho5N/W16ifUMbFjD2yNmnLQcQPo934du79F5BznR4R3u3On53efvaCoDb79Vv6ZAH40V8FpLx9D/APFgMBc9oHUmlsx5JgIY3oGFqx+nnwaDGtx3B3/cJc4H6KaR0BlZGAA0A0s6ScSxE7vk/oq5yHDunE3bj0XHraa1XyRxhnhaQ0+G/wCHlO+JaIKDuf2WRNkmjz9k0TkWT0Nq9aallmNtAI4bSFTkkt3PolV6mttwptDoFWY4iVvuaP5IQs0DpXdzGzy3Uru5xjBJ56IQswUA2y4WaIUek4kOZ8VFO0lsJ3Mo0eb/AKIQvR+fiVjTOJlcPQ0Poo0qFqq27LYYgDVBSk/5iP3Z/NCFxRU1RgJLvMVX3KqR+KGcHmg0j67qQhduIsReKMl3PdsDGX5Dcf6qplk94GXw0UEIVDsAA5Lb8gSp5jU1e/8AJKhY5ehkbiQ8H0Q9xGNG4dRykQoFvfE5x67SU9v+mB6f0CEKiN/XqUIQoP/Z" alt="bike3">
     </div>
 
     <footer>
