@@ -208,6 +208,9 @@ Prototype
 Iterate
 
 
+Open figma>> create design by selecting frames like android compact, extends, based on device then design.
+Once design done goto "F" and select File>> Save local copy to download ".fig" so that we can import
+
 1. Way2pG
 	a. find PG nearby erode
 	b. Find PG by name and contact
