@@ -1,0 +1,133 @@
+#spec{
+    width: 100%;
+    overflow-x: auto;
+}
+table{
+    border: 3px solid red;
+    width: 700px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+th, td{
+    border: 2px solid gray;
+    padding: 10px;
+}
+th{
+    background-color: red;
+    color: white;
+}
+td:hover{
+    color: red;
+    font-size: 25px;
+}
+
+#review{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.feedback{
+    border: 5px double green;
+    background-color: cornsilk;
+    max-width: 100%;
+    flex: 1 1 100%;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 20px;
+    color: green;
+}
+
+@media (min-width: 992px) {
+    .feedback{
+        flex: 1 1 30px;
+    }
+}
+
+#drive{
+    display: flex;
+    justify-content: center;
+}
+form{
+    box-shadow: 10px 10px 30px grey;
+    padding: 50px;
+}
+.form-input{
+    box-sizing: border-box;
+    border: 2px solid turquoise;
+    border-radius: 5px;
+}
+.form-input:hover{
+    box-sizing: border-box;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+.group{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+.btn-group{
+    display: flex;
+    justify-content: space-evenly;
+}
+#btn{
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: turquoise;
+    color: maroon;
+}
+#btn:hover{
+    color: turquoise;
+    background-color: maroon;
+}
+.view{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.view img{
+    max-width: 90%;
+    flex: 1 1 100%;
+    margin: 10px;
+}
+@media (min-width: 992px) {
+    .view img{
+        flex: 1 1 40%;
+        margin:10px;
+        padding: 10px;
+    }   
+}
+
+ol{
+    list-style-image: url('./suzuki.png');
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+nav img{
+    width: 100px;
+    height: 100px;
+}
+nav .links a{
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    background-color: bisque;
+    color: black;
+    font-size: 15px;
+}
+nav .links a:hover{
+    color: red;
+    background-color: black;
+}
