@@ -15,6 +15,7 @@
             justify-content: space-between;
         }
     </style>
+    <script src="text.js"></script>
 </head>
 <body>
     <div class="person">
@@ -22,6 +23,15 @@
         <h2>Technical Consultant</h2>
         <img src="./asset/new copy.jpg" width="200px" height="150px" alt="DP"/>
     </div>
+    <script>
+        var personName = document.getElementsByTagName("h1")[0]
+        personName.addEventListener("click", function(){
+            this.innerHTML = `Razak Mohamed Shahul Hameed`
+        })
+        personName.addEventListener("dblclick", function(){
+            this.innerHTML = `Razak Mohamed S`
+        })
+    </script>
     <h2>Introduction</h2>
     <div class="intro">
         <video width="450px" height="250px" src="./asset/Peru.mp4" controls autoplay muted>

@@ -17,9 +17,18 @@
             margin: 10px;
         }
     </style>
+    <script>
+        // internal script
+        function dollarToRupee(){
+            var dollar = prompt("enter the dollar ")
+            let rupees = dollar*88.76
+            alert(`The equlivalent ruppes ${rupees} for the dollar of ${dollar}`)
+        }
+    </script>
 </head>
 <body>
-    Welcome everyone to <u>ICT Academy UI Developer Training</u>
+    <p ondblclick="dollarToRupee()">Currency Convertor</p>
+    Welcome everyone to <u onmouseenter="alert('Infosys Foundation offers CSR Program')">ICT Academy UI Developer Training</u>
     Where You going to learn how to build<br/><b>static</b> web app, <i>dynamic</i> webapp
     <p id="describe">ICT Academy CSR program offered by Infosys Foundation</p>
     Same CSR Programs involves MERN, Java FSD and Python Django
@@ -29,7 +38,7 @@
     <ol type="a" style="color:white;background-color: black;font-size: 35px;">
         <li>HTML</li><li>CSS</li><li>Tailwind/ Bootstrap</li><li>JS</li>
     </ol>
-    <h3>Phase 2 TOC</h3>
+    <h3 onclick="console.log(`Phase 2 requires Java Script basics`)">Phase 2 TOC</h3>
     <ul type="circle">
         <li>React Components</li>
         <li>Export/ Import</li>

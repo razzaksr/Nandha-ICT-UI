@@ -229,6 +229,70 @@ Once design done goto "F" and select File>> Save local copy to download ".fig" s
 
 
 
+Phase 2: Interactive Web application 
+
+Server Side JS >> Node JS
+Client Side JS >>
+	Integrated With HTML :
+		inline, internal, external
+	Events and actions via Java Script
+		games
+		Validation
+		convertors
+		CRUD
+		Data processing
+		Events:
+			onmouseenter=""
+			onmouseleave=""
+			onclick=""
+			ondblclick=""
+			....
+	
+
+Objective of Programming:
+	Offering solutions
+		Data 		>> temp(variables/ arrays/ collections)/ perm
+			variables:
+				var, const, let
+				eg: var mobileNumber=98765676534
+					let aadhaar = 987656789876
+					const pan = ABCDE1221T
+			data types:
+				Number	>> whole, decimal
+				String
+				Boolean
+				Date
+				Object>> array/list, JSON, 
+				
+		Functionalities
+			function funName(){
+				// definition
+			}
+
+Operators:
+	arithmetic
+	relational
+	logical
+	assignment
+	ternary>> (condition)?true:false
+
+condition:
+	if, else
+	switch
+loop:
+	while
+	for
+	
+Objects:
+	document
+	window>> onload, 
+
+	Document Object Model (DOM):
+		document>> object
+		selectors: id, name, tagName, className
+		tagName>> element Name>> h2>> 0,1,2,3...
+		
+			
 
 
 
