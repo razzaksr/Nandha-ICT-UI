@@ -312,12 +312,17 @@ DOM CRUD Operation
 	data logic:
 	Array/ list object like map, filter, push, pop, findIndex, splice
 	1. basic CRUD 
-	
-	
-
-
-
-
+	2. real time use case
+		list of JSON's
+			{
+				"model":"ACER view",
+				"size":14.5
+				"SN":"213DRE2"
+			}
+Task :
+	1. Hack-a-thon: CRUD Student management
+	2. Beneficiaries: CRUD payees name, accountno,ifscode
+	3. Insurance Policies: CRUD schemes
 
 
 
