@@ -292,6 +292,12 @@ Objects:
 		selectors: id, name, tagName, className
 		tagName>> element Name>> h2>> 0,1,2,3...
 		
+		Usage:
+		1. Modify Content of element
+		2. Modify attributes of element
+		3. Add/ Remove element
+		4. Validation
+		5. CRUD
 	
 task 1: via prompt and eventListener while click on button
 	SIP Calculator	
@@ -301,21 +307,22 @@ task 1: via prompt and eventListener while click on button
 
 DOM with table add, deletion, reset on traverse over TD
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 DOM CRUD Operation
+	storage>> list/ array, localStorage, sessionStorage
+	data logic:
 	Array/ list object like map, filter, push, pop, findIndex, splice
+	1. basic CRUD 
+	
+	
+
+
+
+
+
+
+
+
+
+
+
 DOM Form Validation using regex
