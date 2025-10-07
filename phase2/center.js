@@ -47,8 +47,18 @@ window.onload = function(){
             "weight": weight.value,
             "gender":gender.value
         }
-        myPatients.push(patient);
-        alert("Patient Registered Successfully")
+        // decide whether need to add new entry or update
+        var position = -1
+        position = myPatients.findIndex(function(obj,ind){
+            return obj.name === name.value
+        })
+        if(position!==-1){
+            myPatients[position]=patient
+            alert(`${name.value} has updated`)
+        }else{
+            myPatients.push(patient);
+            alert("Patient Registered Successfully")
+        }
         name.value="";age.value="",height.value="";weight.value="";
     })
     document.getElementById("view").addEventListener('dblclick',function(){
@@ -61,8 +71,7 @@ window.onload = function(){
         myPatients.forEach(function(patient){
             console.log(patient.name)
             var box = document.createElement("div");
-            box.innerHTML = "<h3>"+patient.name+"</h3><h3>"+
-            patient.gender+"</h3>";
+            box.innerHTML = `<h3>${patient.name}</h3><h3>${patient.gender}</h3><button onclick=opens('${patient.name}')>Edit</button><button onclick=erase('${patient.name}')>Delete</button>`;
             // style properties
             box.style.display="inline-block";
             box.style.width="300px";
@@ -76,4 +85,28 @@ window.onload = function(){
             root.appendChild(box);
         })
     })
+}
+function opens(patName){
+    console.log(patName)
+    var found = myPatients.find(function(obj){
+        return obj.name===patName
+    })
+    console.log('found'+JSON.stringify(found))
+    var name = document.getElementById("name");
+    var age = document.getElementById("age");
+    var height = document.getElementById("height");
+    var weight = document.getElementById("weight");
+    var gender = document.getElementById("gender");
+    name.value = found.name
+    name.setAttribute("readonly",true)
+    age.value=found.age
+    height.value=found.height
+    weight.value=found.weight
+    gender.value=found.gender
+}
+function erase(patName){
+    myPatients = myPatients.filter(function(obj){
+        return obj.name!==patName
+    })
+    alert(`${patName} has been deleted from hospital records`)
 }
