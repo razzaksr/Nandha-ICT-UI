@@ -412,9 +412,13 @@ component				element
 		const hai = () =>{
 			
 		}
+	Components
+		Object Oriented
+		Functional >> hooks>> useState, useEffect, useParams, useNavigate,...
 
-
-
+	const[var,setVar]=useState(initialization)
+			
+	
 
 
 
