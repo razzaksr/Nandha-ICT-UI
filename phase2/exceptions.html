@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+    <!-- <script>
+        window.onload=function(){
+            var cm
+            var m
+            try{
+                document.getElementById("hight").addEventListener('blur',function(){
+                    cm = this.value
+                    m = Number(cm/100)
+                    alert(`${m} equivalent to ${cm}`)
+                })
+            }catch(err){
+                alert(err)
+                document.getElementById("height").addEventListener('blur',function(){
+                    cm = Number(this.value)
+                    m = cm/100
+                    alert(`${m} equivalent to ${cm}`)
+                })
+            }
+        }
+    </script> -->
+    <script src="formvalid.js"></script>
+</head>
+<body>
+    <input type="text" id="height" placeholder="enter the height in CM">
+
+
+    <form onsubmit="return validate()">
+        <input type="text" id="pan" placeholder="enter pan card">
+        <span id="err-pan"></span>
+        <input type="text" id="email" placeholder="enter the email">
+        <span id="err-email"></span>
+        <input type="password" id="pass" placeholder="password">
+        <span id="err-pass"></span>
+        <input type="submit" value="Login">
+    </form>
+    <button onclick='window.location.assign("https://www.linkedin.com/")'>
+        linkedin
+    </button>
+</body>
+</html>

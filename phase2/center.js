@@ -33,6 +33,72 @@ let myPatients = [
 
 // CRUD
 window.onload = function(){
+
+    // validation functions
+
+    // name validation
+    this.document.getElementById("name").addEventListener('blur',function(){
+        var entered = this.value
+        try{
+            if(!(/^[A-Za-z ]{3,}$/).test(entered))
+                throw "Invalid Name"
+            document.getElementById("err-name").innerHTML=""
+        }catch(err){
+            document.getElementById("err-name").innerHTML=err
+        }
+    })
+
+    // age validation
+    this.document.getElementById("age").addEventListener('blur',function(){
+        var entered = this.value
+        try{
+            if(!(/^[0-9]{1,2}$/).test(entered))
+                throw "Invalid Age"
+            document.getElementById("err-age").innerHTML=""
+        }catch(err){
+            document.getElementById("err-age").innerHTML=err
+        }
+    })
+
+    // height validation
+    this.document.getElementById("height").addEventListener('blur',function(){
+        var entered = this.value
+        try{
+            if(!(/^[0-9]{1,3}$/).test(entered))
+                throw "Invalid height"
+            document.getElementById("err-height").innerHTML=""
+        }catch(err){
+            document.getElementById("err-height").innerHTML=err
+        }
+    })
+
+    // height validation
+    document.getElementById("weight").addEventListener('blur',function(){
+        var entered = this.value
+        try{
+            if(!(/^[0-9]{1,3}$/).test(entered))
+                throw "Invalid weight"
+            document.getElementById("err-weight").innerHTML=""
+        }catch(err){
+            document.getElementById("err-weight").innerHTML=err
+        }
+    })
+
+    document.getElementById("gender").addEventListener('blur',function(){
+        try{
+            if(document.getElementById("gender").value==="any")
+                throw "Invalid Gender"
+            document.getElementById("err-gender").innerHTML=""
+        }catch(err){
+            document.getElementById("err-gender").innerHTML=err
+        }
+    })
+
+
+
+
+
+
     // Create
     document.getElementById("register").addEventListener('click',function(){
         var name = document.getElementById("name");
@@ -48,8 +114,7 @@ window.onload = function(){
             "gender":gender.value
         }
         // decide whether need to add new entry or update
-        var position = -1
-        position = myPatients.findIndex(function(obj,ind){
+        var position = myPatients.findIndex(function(obj){
             return obj.name === name.value
         })
         if(position!==-1){
@@ -110,3 +175,5 @@ function erase(patName){
     })
     alert(`${patName} has been deleted from hospital records`)
 }
+
+

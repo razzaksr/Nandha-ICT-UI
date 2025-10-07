@@ -325,9 +325,41 @@ Task :
 	3. Insurance Policies: CRUD schemes
 
 
-
-
-
+Java Script Exception Handling:
+objective:
+	provide another chance to the user to continue/ prevent the process 
+	
+	flow:
+		try{
+			.. possible statement which cause exception
+		}
+		catch(error){
+			.. provide another chance by exlpaning the error 				in user terms
+		}
+		finally{
+			.. statement executes always exception occurs/ 				not
+		}
+	ReferenceError
+	UncaughtError
 
 
 DOM Form Validation using regex
+Regular Expression: validating data at client side 
+	
+(/exp/).test(field)
+	true/ false
+
+	a-z		>> lowercase alpha
+	A-Z		>> upper case alpha
+	0-9		>> numbers
+	
+	+		>> 1/ more occurrence
+	*		>> 0/ more occurrence
+	$		>> check text at the end
+	^		>> check text at the beginning
+	{}		>> size>> min, max
+
+
+
+
+
