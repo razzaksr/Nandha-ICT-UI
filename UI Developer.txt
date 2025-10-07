@@ -359,6 +359,63 @@ Regular Expression: validating data at client side
 	^		>> check text at the beginning
 	{}		>> size>> min, max
 
+Phase 3: React JS
+server side presentation logic >> front end
+	CRUD
+	Components>> JavaScriptXml/eXtension, JS
+	Properties
+	Routers
+	Asynchronous
+	state management
+
+nodejs.org>> 
+	SDK to enables server side development(front end, backend)
+
+	node --version
+	npm --version
+
+	Setting Up React environment:
+		npm install -g create-react-app
+ 
+		npx create-react-app APP-NAME
+
+
+Its library>> base module react(JSX), react-dom(binding/map), react-scripts(execution, testing, building, deploy)
+
+		npx create-react-app APP-NAME
+		npx create-react-app explore-ui
+
+explore-ui
+	node_modules>> physical location where libraries/modules installed
+	package.json
+	package-lock.json
+	src
+	public
+	build
+
+	React Component>> JS/ JSX
+
+component				element
+	h1					h1
+	id(property)			id(attribute)
+	input type(property)		input type(attribute)
+	className			class
+	onClick				onclick
+	onDoubleClick			ondblclick
+	
+	normal function:
+		function hai(){
+
+		}
+
+	arrow function:
+		const hai = () =>{
+			
+		}
+
+
+
+
 
 
 
