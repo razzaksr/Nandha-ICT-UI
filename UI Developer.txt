@@ -497,3 +497,22 @@ JSON.parse(string)>> convert string into json
 Contact App 	>> {"name":"","number":87678,"email":6789,"pic":"url"}
 	CRUD, routing, localStorage
 
+
+
+	Create new contact>>
+		load existing in temporary(read)>>get mandate details from user via forms>> temporary storage >> localStorage(overwrite)
+	Read all contact>>
+		load existing in temporary>> display in the component
+	Update Contact>>
+		load existing in temp>> get updated detail from user>> update in temp>> overwrite in localStorage
+	Delete Contact>>
+		load existing in temp>> delete>> overwrite localstorage
+
+
+	Task:
+		consider the ekart logistics supply chain wish to build tracking packages where the following actions would be performed
+		adding new package in to supply chain
+		view and update the package status such as shipped, packaged, delivered, returned
+		view packages those are all in delivered stage
+		Note: each package can have particulars such as fromAddress, toAddress, sender, receiver, item, packageType(such as ordinary/ pro), status
+		Implementation should include: localStorage, Routers
