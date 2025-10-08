@@ -1,0 +1,15 @@
+#row{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#item{
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    background-color: cadetblue;
+    color: brown;
+    padding: 10px;
+    margin: 10px;
+}

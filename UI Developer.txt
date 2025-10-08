@@ -380,6 +380,12 @@ nodejs.org>>
 		npx create-react-app APP-NAME
 
 
+Whenever PS1 error comes:
+set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+
+
 Its library>> base module react(JSX), react-dom(binding/map), react-scripts(execution, testing, building, deploy)
 
 		npx create-react-app APP-NAME
@@ -414,13 +420,80 @@ component				element
 		}
 	Components
 		Object Oriented
-		Functional >> hooks>> useState, useEffect, useParams, useNavigate,...
 
+
+		Functional
+	Statement Management in JSX/ JS:
+		hooks>> useState, useEffect, useParams, useNavigate,...
+
+useState Hook:
 	const[var,setVar]=useState(initialization)
-			
+	string, number, [], {}
+
+useEffect Hook:
+	calls everytime whenever components gets loaded
+
+react-router-dom >> module>> npm i react-router-dom
+	navigation between components
+	offers routes with path, so whenever the path mentioned in the url the respective component will be invoked
 	
+	useParams	>> passing data via url to the component
+	useNavigate	>> redirect to another component
+
+
+	index.js
+		routes
+		
+
+
+component1 >> h1>> welcome to React JS
+component2 >> h1>> Angular prefers TypeScript
+component3 >> h1>> React supports axios to connect backend
+
+<BrowserRouter>
+<Routes>
+	<Route path="com1" element={<component1/>} />
+	<Route path="com2" element={<component2/>} />
+	<Route path="com3" element={<component3/>} />
+</Routes>
+</BrowserRouter>
 
 
 
 
+http://localhost:4200/com1
+http://localhost:4200/com2
+http://localhost:4200/com3
+
+usePArams:
+
+
+	<Route path="show/:month" element={<Season/>} />
+
+
+localhost:4200/show/aadi	>> grey
+localhost:4200/show/sithirai	>> orange
+localhost:4200/show/margali	>> lightblue
+localhost:4200/show/ippasi	>> blue
+
+
+
+storage:
+	in memory>> list of JSON
+	localStorage>> browser level String storage where any format/data need to be converted into string
+		setItem("nandha",value)
+		getItem("nandha")
+		removeItem("nandha")
+
+[
+{},
+{},
+{}
+]
+JSON.stringify(json)>> json converted into String
+JSON.parse(string)>> convert string into json
+
+
+Contact App 	>> {"name":"","number":87678,"email":6789,"pic":"url"}
+	CRUD, routing, localStorage
 
