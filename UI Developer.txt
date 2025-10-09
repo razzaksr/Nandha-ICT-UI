@@ -465,7 +465,7 @@ http://localhost:4200/com1
 http://localhost:4200/com2
 http://localhost:4200/com3
 
-usePArams:
+useParams:
 
 
 	<Route path="show/:month" element={<Season/>} />
@@ -516,3 +516,75 @@ Contact App 	>> {"name":"","number":87678,"email":6789,"pic":"url"}
 		view packages those are all in delivered stage
 		Note: each package can have particulars such as fromAddress, toAddress, sender, receiver, item, packageType(such as ordinary/ pro), status
 		Implementation should include: localStorage, Routers
+
+
+Phase 4: Angular
+Framework>> Google
+Dynamic Single Page Application
+Dependency Injection
+
+Type Script:
+	varName: number/string = value
+	funName(var:type):number{
+
+	}
+	
+Java Script
+	var varName = value
+	function(){}, const hai=()=>{}
+
+
+
+
+Setting Up Angular environment:
+	npm i -g @angular/cli
+
+Command line interface:
+	to create project:
+		ng new project-name
+	to create components:
+		ng generate component component-name
+			each components will have
+				ts:
+				to configure what can be used 					template file
+				additional modules import
+				
+				 spec>> , module, html(template)
+	pipe
+	directives
+	service
+	
+			
+project:
+	package.json>> npm start>> ng serve
+	angular.json
+	src>>
+		USER DEFINED COMPONENTS
+		app.ts>> @Component("app-route")
+		app.css
+		app.html
+		
+	index.html>> <app-root></app-root>
+	
+
+	display components in html
+	App.ts
+		selector>> app-root
+		templateUrl>> app.html
+
+	main.ts>> App
+	index.html
+		<app-root></app-root>
+
+	main.ts>> App>> app.ts>> selector>> app-root>> app.html>> index.html
+
+
+if i wish to create component to be displayed in app.html
+	1. create component eg: ng g c hai
+	2. hai.ts>> selector: app-hai
+	3. app.ts>> imports[Hai]
+	4. app.html: <hai></hai>
+
+location where components being created
+	src/app/hai
+		hai.html, hai.ts,...
