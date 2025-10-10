@@ -655,12 +655,14 @@ vehicle:string,
 fine:number
 }
 
+Reactive Forms
+	validation
+	ts>> ReactiveFormModule, FormBuilder, FormGroup
+
 JSONSERVER:
 the followings are implemented via service using dependency injection
 	Read everything>> get mapping
 	Delete via id	>> delete mapping
 		event binding used
-
-
-
-
+	Create	>> Post mapping with REactiveForms to get user input with Validation
+	Update	>> Put mapping with reactiveForms load using two way binding

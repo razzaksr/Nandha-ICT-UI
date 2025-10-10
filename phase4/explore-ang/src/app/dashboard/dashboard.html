@@ -1,4 +1,52 @@
 <p>dashboard works!</p>
+<form (ngSubmit)="generating()" [formGroup]="challanForm">
+    <div>
+        <label>Enter the challan id</label>
+        <input formControlName="id" />
+        @if(challanForm.controls['id'].touched&&challanForm.controls['id'].invalid){
+            @if(challanForm.controls['id'].errors?.['required']){
+                <span>Challan Id is required</span>
+            }
+            @if(challanForm.controls['id'].errors?.['minlength']){
+                <span>Challan Id is invlaid</span>
+            }
+        }
+    </div>
+    <div>
+        <label>Enter the district</label>
+        <input formControlName="district" />
+        @if(challanForm.controls['district'].touched&&challanForm.controls['district'].invalid){
+            @if(challanForm.controls['district'].errors?.['minlength']){
+                <span>Challan district is invlaid</span>
+            }
+        }
+    </div>
+    <div>
+        <label>Enter the challan vehicle</label>
+        <input formControlName="vehicle" />
+        @if(challanForm.controls['vehicle'].touched&&challanForm.controls['vehicle'].invalid){
+            @if(challanForm.controls['vehicle'].errors?.['required']){
+                <span>Challan vehicle is required</span>
+            }
+            @if(challanForm.controls['vehicle'].errors?.['minlength']){
+                <span>Challan vehicle is invlaid</span>
+            }
+        }
+    </div>
+    <div>
+        <label>Enter the challan fine</label>
+        <input formControlName="fine" />
+        @if(challanForm.controls['fine'].touched&&challanForm.controls['fine'].invalid){
+            @if(challanForm.controls['fine'].errors?.['required']){
+                <span>Challan fine is required</span>
+            }
+            @if(challanForm.controls['fine'].errors?.['min']){
+                <span>Challan fine is invlaid</span>
+            }
+        }
+    </div>
+    <button type="submit">{{editId!=null?'UpdateChallan':'Generate Challan'}}</button>
+</form>
 <table>
     <thead>
         <tr>
@@ -15,6 +63,7 @@
                 <td>{{each.vehicle}}</td>
                 <td>{{each.fine}}</td>
                 <td>
+                    <button (click)="modify(each.id)">Edit</button>
                     <button (click)="onRemoveCalled(each.id)">Delete</button>
                 </td>
             </tr>
