@@ -588,3 +588,79 @@ if i wish to create component to be displayed in app.html
 location where components being created
 	src/app/hai
 		hai.html, hai.ts,...
+
+in order to us any object, property, function in html, it must be mentioned in its ts file
+
+Data Binding:
+	property bind
+	style bind
+	two way bind(model)
+	event bind>> click
+
+list from temp array
+
+
+
+Pipes>> middleware to apply data processing in the html
+	ng generate pipe pipename
+Directives: applied in the property of element>> so we need element tree and its hierarchy>> ElementRef, Renderer
+	ngFor
+	ngIF
+	user defined :
+		ng generate directive directives/nameofdir
+
+
+json-server
+
+json file hosted into database server at port number 3000
+
+json:
+{
+"collectio-name":[
+	{
+		"key":"value",		"key":"value"
+	}
+]
+}
+
+npm i json-server
+mappings: it will has in built functionality to perform CRUD like web service(rest api) based on URL
+get>> read 
+post>> insert, 
+put>> update
+delete>> delete
+	http://localhost:3000/collectionName/	>> read all records
+	http://localhost:3000/collectionName/:id	>> read one record
+	http://localhost:3000/collectionName/:id	>> update record
+	http://localhost:3000/collectionName/:id	>> delete record
+	
+how to make the file into srver:
+eg: base.json
+json-server --watch base.json>> it will be hosted at 3000
+
+
+Inorder to use HttpClient it has to be provided in appConfig
+src/app/app.config.ts >> provideHttpClient()
+
+base.json(server) >> service(via HttpClient) >> component >> html
+
+Service>> where all CRUD operation with mapping to the jsonserver, and it will be injected in component
+
+	ng generate service servicename
+
+model>> object
+interface challen{
+id:string,
+vehicle:string,
+fine:number
+}
+
+JSONSERVER:
+the followings are implemented via service using dependency injection
+	Read everything>> get mapping
+	Delete via id	>> delete mapping
+		event binding used
+
+
+
+

@@ -1,11 +1,18 @@
 <p>flash works!</p>
-<table>
+<!-- style binding -->
+<table [style]="styling">
     <thead>
         <tr><th>Phase</th><th>Skills</th></tr>
     </thead>
     <tbody>
-        <tr><td>1</td><td>UI Design</td></tr>
+        <!-- <tr><td (click)="hovering()">1</td><td>UI Design</td></tr>
         <tr><td>2</td><td>JS</td></tr>
-        <tr><td>3</td><td>React</td></tr>
+        <tr><td>3</td><td>React</td></tr> -->
+        @for(each of items; let ind=$index;track ind){
+            <tr>
+                <td>{{each.Phase}}</td>
+                <td [appUpgrade]="each.Skill | tech">{{each.Skill | tech}}</td>
+            </tr>
+        }
     </tbody>
 </table>

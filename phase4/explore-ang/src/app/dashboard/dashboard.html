@@ -1,0 +1,23 @@
+<p>dashboard works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th><th>District</th>
+            <th>Vehicle</th><th>Fine</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(each of tempChallans; let ind=$index;track ind){
+            <tr>
+                <td>{{each.id}}</td>
+                <td>{{each.district}}</td>
+                <td>{{each.vehicle}}</td>
+                <td>{{each.fine}}</td>
+                <td>
+                    <button (click)="onRemoveCalled(each.id)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
