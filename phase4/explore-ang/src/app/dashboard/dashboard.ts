@@ -4,10 +4,12 @@ import { Challan } from '../models/challan';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Moveup } from "../directives/moveup";
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Userservice } from '../services/userservice';
+import { Login } from "../login/login";
 
 @Component({
   selector: 'app-dashboard',
-  imports: [ReactiveFormsModule, FormsModule, Moveup],
+  imports: [ReactiveFormsModule, FormsModule, Moveup, Login],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
   animations:[
@@ -33,7 +35,7 @@ export class Dashboard implements OnInit {
   challanForm!:FormGroup
 
   // dependency injection
-  constructor(private serv:Challanservice, private builder:FormBuilder){}
+  constructor(public auth:Userservice,private serv:Challanservice, private builder:FormBuilder){}
 
   configureForm(){
     this.challanForm = this.builder.group({

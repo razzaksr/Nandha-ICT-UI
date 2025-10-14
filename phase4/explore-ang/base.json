@@ -1,4 +1,20 @@
 {
+  "users": [
+    {
+      "username": "divakar",
+      "password": "diva@123",
+      "role": "official",
+      "contact": 876567876,
+      "id": "af00"
+    },
+    {
+      "username": "sabari",
+      "password": "sabari@123",
+      "role": "citizen",
+      "contact": 56789876567,
+      "id": "7beb"
+    }
+  ],
   "challan": [
     {
       "id": "TN827jdbcjd83",
@@ -34,13 +50,7 @@
       "id": "sdjvb&*sTNsc",
       "district": "Erode",
       "vehicle": "TN57DE1211",
-      "fine": "500"
-    },
-    {
-      "id": "sdjvb&*sTNsc",
-      "district": "Erode",
-      "vehicle": "TN57DE1211",
-      "fine": "500"
+      "fine": "2300"
     },
     {
       "id": "sdjvb&*sTNsc",

@@ -1,0 +1,13 @@
+<p>login works!</p>
+<div>
+    <div>
+        <div>
+            <input [(ngModel)]="user" placeholder="enter the username" />
+            <input [(ngModel)]="pass" placeholder="enter the password" />
+            <button (click)="loggingIn()" >Login</button>
+            @if(error){
+                <p>{{error}}</p>
+            }
+        </div>
+    </div>
+</div>

@@ -688,5 +688,11 @@ BrowserAnimationModule
 inbuilt directive:
 write animation in dashboard.ts
 
+Authentication:
+users scheme with roles in base.json 
+user service>> signingIn. signingOut, readUser, readRole
+login >> Component
 
-
+html:
+1. login check
+2. role check
