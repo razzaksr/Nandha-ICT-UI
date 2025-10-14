@@ -666,3 +666,27 @@ the followings are implemented via service using dependency injection
 		event binding used
 	Create	>> Post mapping with REactiveForms to get user input with Validation
 	Update	>> Put mapping with reactiveForms load using two way binding
+
+
+Scroll Directive
+Animation Directive
+
+Multiple directives/ composite directives
+
+
+component/ service/ directives
+name.ts	>> source code
+name.spec.ts>> test code
+
+
+Animation:
+npm install @angular/animations
+
+app.config.ts
+BrowserAnimationModule
+
+inbuilt directive:
+write animation in dashboard.ts
+
+
+

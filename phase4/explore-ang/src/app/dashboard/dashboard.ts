@@ -2,16 +2,31 @@ import { Component, OnInit } from '@angular/core';
 import { Challanservice } from '../services/challanservice';
 import { Challan } from '../models/challan';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Moveup } from "../directives/moveup";
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [ReactiveFormsModule,FormsModule],
+  imports: [ReactiveFormsModule, FormsModule, Moveup],
   templateUrl: './dashboard.html',
-  styleUrl: './dashboard.css'
+  styleUrl: './dashboard.css',
+  animations:[
+    trigger('growAndShrink',[
+      state('normal',style({transform:'scale(1)'})),
+      state('enlarged',style({transform:'scale(1.5)'})),
+      transition('normal<=>enlarged',animate('300ms ease-in-out'))
+    ])
+  ]
 })
 export class Dashboard implements OnInit {
 
+  triggerPoint = false
+  state: 'normal' | 'enlarged' = 'normal'
   tempChallans:Challan[] = []
+
+  growOrChange(){
+    this.state = this.state==='normal'?'enlarged':'normal'
+  }
 
   editId: string|null=null
 
@@ -54,6 +69,7 @@ export class Dashboard implements OnInit {
   }
 
   modify(id:string){
+    this.triggerPoint = !this.triggerPoint
     this.editId=id
     const found = this.tempChallans.filter(obj=>obj.id==id)[0]
     this.challanForm.patchValue(found)
